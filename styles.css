@@ -19,7 +19,7 @@ body {
 
 .hand-wave-emoji {
   animation-name: hand-wave;
-  animation-duration: 5s;
+  animation-duration: 3s;
   display: inline-block;
   animation-iteration-count: infinite;
 }
@@ -28,8 +28,24 @@ main {
   margin: 4rem 0;
 }
 
+.about-me-summary {
+  width: 70vw;
+}
+
 .highlighted-text {
-  background-color: pink;
+  background: linear-gradient(to left, white 50%, pink 50%) right;
+  background-size: 200%;
+  animation: text-highlight 2s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes text-highlight {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
 }
 
 @keyframes hand-wave {
@@ -59,17 +75,21 @@ main {
   }
 }
 
+/* Modifications for mobile */
 @media only screen and (max-width: 499px) {
   body {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .welcome-msg {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .welcome-msg > div {
     margin: 1.25rem 0;
   }
   .name-break {
     display: block;
+  }
+  .about-me-summary {
+    width: unset;
   }
 }
