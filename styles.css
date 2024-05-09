@@ -24,12 +24,13 @@ body {
   animation-iteration-count: infinite;
 }
 
-main {
+main,
+section {
   margin: 4rem 0;
 }
 
 .about-me-summary {
-  width: 70vw;
+  width: 70%;
 }
 
 .highlighted-text {
@@ -37,6 +38,48 @@ main {
   background-size: 200%;
   animation: text-highlight 2s forwards;
   animation-delay: 1s;
+}
+
+.my-portraits {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  border: 1px solid black;
+}
+.filter-select {
+  border-right: 1px dashed black;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.color-thumbnail {
+  border: 1px solid black;
+  padding: 0.75rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.portrait-thumbnail > img {
+  width: 7rem;
+}
+.image-display {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.image-display::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(150, 8, 230, 0.16);
+}
+.portrait {
+  margin: 1rem;
+  width: 30rem;
 }
 
 @keyframes text-highlight {
@@ -76,7 +119,7 @@ main {
 }
 
 /* Modifications for mobile */
-@media only screen and (max-width: 499px) {
+@media only screen and (max-width: 775px) {
   body {
     font-size: 2.5rem;
   }
@@ -91,5 +134,15 @@ main {
   }
   .about-me-summary {
     width: unset;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    display: flex;
+    justify-content: center;
+  }
+  body {
+    max-width: 1200px;
   }
 }
