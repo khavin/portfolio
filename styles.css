@@ -40,7 +40,7 @@ section {
   animation-delay: 1s;
 }
 
-.my-portraits {
+.my-portrait {
   width: 100%;
   display: grid;
   grid-template-columns: 30% 70%;
@@ -134,6 +134,20 @@ section {
   }
   .about-me-summary {
     width: unset;
+  }
+  .filter-select {
+    display: none;
+  }
+  .image-display::after {
+    display: none;
+  }
+  .my-portrait {
+    display: block;
+    border: unset;
+  }
+  .portrait {
+    margin: unset;
+    width: 100%;
   }
 }
 
