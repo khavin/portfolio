@@ -1,12 +1,12 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 1rem;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
 }
 
 .welcome-msg {
   font-weight: normal;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
 }
 
 .welcome-msg > div {
@@ -22,6 +22,7 @@ body {
   animation-duration: 3s;
   display: inline-block;
   animation-iteration-count: infinite;
+  font-style: normal;
 }
 
 main,
@@ -56,12 +57,54 @@ section {
   gap: 1rem;
 }
 .color-thumbnail {
-  border: 1px solid black;
+  border: 2px solid grey;
   padding: 0.75rem;
-  cursor: pointer;
   position: relative;
 }
-
+/* start 0, end 4 */
+.white-box {
+  animation: big 4s;
+  animation-delay: 0s;
+}
+/* start 3, end 7 */
+.green-box {
+  animation: big 4s;
+  animation-delay: 3s;
+}
+/* start 6, end 10 */
+.blue-box {
+  animation: big 4s;
+  animation-delay: 6s;
+}
+/* start 9, end 13 */
+.yellow-box {
+  animation: big 4s;
+  animation-delay: 9s;
+}
+/* start 12, end 16 */
+.red-box {
+  animation: big 4s;
+  animation-delay: 12s;
+}
+/* start 15, end 19 */
+.purple-box {
+  animation: big 4s;
+  animation-delay: 15s;
+}
+@keyframes big {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.5);
+  }
+  75% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .portrait-thumbnail > img {
   width: 7rem;
 }
@@ -75,7 +118,31 @@ section {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(150, 8, 230, 0.16);
+  background-color: rgb(255, 255, 255, 0);
+  animation: bg 23s ease-out;
+}
+@keyframes bg {
+  0% {
+    background-color: rgb(255, 255, 255, 0);
+  }
+  16% {
+    background-color: rgb(8, 230, 101, 0.16);
+  }
+  33% {
+    background-color: rgb(8, 159, 230, 0.16);
+  }
+  50% {
+    background-color: rgb(227, 230, 8, 0.16);
+  }
+  66% {
+    background-color: rgb(230, 8, 8, 0.16);
+  }
+  83% {
+    background-color: rgb(150, 8, 230, 0.16);
+  }
+  100% {
+    background-color: rgb(255, 255, 255, 0);
+  }
 }
 .portrait {
   margin: 1rem;
@@ -123,10 +190,10 @@ section {
 /* Modifications for mobile */
 @media only screen and (max-width: 775px) {
   body {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .welcome-msg {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .welcome-msg > div {
     margin: 1.25rem 0;
