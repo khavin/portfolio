@@ -38,16 +38,13 @@ section {
 }
 
 .highlighted-text {
-  background: linear-gradient(to left, white 50%, pink 50%) right;
+  background: linear-gradient(to left, white 50%, black 50%) right;
   background-size: 200%;
+  color: black;
   animation: text-highlight 2s forwards;
   animation-delay: 1s;
 }
 
-.my-portrait {
-  width: 100%;
-  grid-template-columns: 30% 70%;
-}
 .filter-select {
   border-right: 1px dashed black;
   padding: 1rem;
@@ -62,10 +59,38 @@ section {
 }
 .image-display {
   display: flex;
-  justify-content: center;
   position: relative;
+  border: 1px solid rgba(77, 77, 77);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(89, 26, 144, 1) 0px,
+    rgba(217, 188, 242, 255) 2px,
+    transparent 2px,
+    transparent 9px
+  );
+}
+.image-display::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(77, 77, 77, 17%);
+}
+.image-display div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    white 0px,
+    white 4px,
+    transparent 4px,
+    transparent 12px
+  );
 }
 .portrait {
+  position: relative;
+  z-index: 1;
   width: 30rem;
 }
 
@@ -73,9 +98,11 @@ section {
 @keyframes text-highlight {
   0% {
     background-position: right;
+    color: black;
   }
   100% {
     background-position: left;
+    color: white;
   }
 }
 
@@ -129,12 +156,11 @@ section {
   .filter-select {
     display: none;
   }
+  .image-display {
+    border: none;
+  }
   .image-display::after {
     display: none;
-  }
-  .my-portrait {
-    display: block;
-    border: unset;
   }
   .portrait {
     margin: unset;
