@@ -1,21 +1,48 @@
+:root {
+  --heading-font: "Libre Baskerville", serif;
+}
 body {
   /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: "Libre Baskerville", serif;
+  font-family: "EB Garamond", serif;
   font-weight: 400;
+  margin: 3rem;
+  font-size: 1.75rem;
+}
+main {
+  margin-bottom: 4rem;
+}
+.site-header {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
   font-style: italic;
-  margin: 1rem;
-  font-size: 1.75rem;
 }
-
 .welcome-msg {
-  font-weight: normal;
-  font-size: 1.75rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
-
-.welcome-msg > div {
-  margin: 0.5rem 0;
+.repo-profile-links {
+  display: flex;
+  gap: 0.5rem;
 }
-
+.header-link {
+  text-decoration: none;
+}
+.nav-logo {
+  width: 2.5rem;
+  cursor: pointer;
+}
+.link-logo {
+  font-family: unset;
+}
+.link-emoji {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: normal;
+}
 .name-break {
   display: none;
 }
@@ -33,67 +60,104 @@ section {
   margin: 4rem 0;
 }
 
+section {
+  border-bottom: 2px solid black;
+}
+
 .about-me-summary {
   width: 70%;
-}
-
-.highlighted-text {
-  background: linear-gradient(to left, white 50%, black 50%) right;
-  background-size: 200%;
-  color: black;
-  animation: text-highlight 2s forwards;
-  animation-delay: 1s;
-}
-
-.filter-select {
-  border-right: 1px dashed black;
-  padding: 1rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
+  font-size: 2rem;
 }
-.portrait-thumbnail > img {
-  width: 7rem;
+.tech-stack {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 0;
 }
-.image-display {
+.section-title {
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  font-style: italic;
+}
+.project-list {
+  padding: 0;
+  margin-bottom: 0;
+}
+.projects-section {
+  border-bottom: 2px solid black;
+}
+.project-title {
+  width: fit-content;
+  font-family: var(--heading-font);
+  font-style: italic;
+  font-size: 1.75rem;
   display: flex;
+  gap: 0.25rem;
+  margin: 0.5rem 0;
+}
+.project-title a {
+  text-decoration: none;
+  color: inherit;
+}
+.project-title-link {
+  border-bottom: 3px solid white;
+}
+.project-title-link:hover {
+  border-bottom: 3px solid black;
+}
+.repo-link > img {
+  width: 1.75rem;
+  margin-left: 0.5rem;
+}
+.project-list-item {
+  list-style: none;
+  border-top: 2px solid black;
+  padding: 2rem 0;
+}
+.project-description {
+  font-size: 1.5rem;
+}
+.project-regrets {
+  margin: 3rem 0 0 0;
+  font-size: 1.5rem;
+}
+blockquote {
+  display: block;
+  margin: 4rem 2.5rem;
+  font-size: 1.5rem;
   position: relative;
-  border: 1px solid rgba(77, 77, 77);
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(89, 26, 144, 1) 0px,
-    rgba(217, 188, 242, 255) 2px,
-    transparent 2px,
-    transparent 9px
-  );
 }
-.image-display::after {
-  content: "";
+blockquote:before {
+  display: block;
+  content: "\201C";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(77, 77, 77, 17%);
+  font-size: 7rem;
+  left: -2.75rem;
+  top: -4rem;
+  color: black;
 }
-.image-display div {
+blockquote cite {
+  display: block;
+  margin-top: 1rem;
+  font-style: italic;
+}
+.profession-section {
+  padding-bottom: 3rem;
+}
+.profession-title {
+  font-family: var(--heading-font);
+  font-style: italic;
+  font-size: 1.75rem;
   display: flex;
-  justify-content: center;
-  width: 100%;
-  background: repeating-linear-gradient(
-    -45deg,
-    white 0px,
-    white 4px,
-    transparent 4px,
-    transparent 12px
-  );
+  justify-content: space-between;
 }
-.portrait {
-  position: relative;
-  z-index: 1;
-  width: 30rem;
+.profession-desc {
+  font-size: 1.5rem;
 }
-
+.profession-duration {
+  font-size: 1.25rem;
+}
 /* Full stack developer highlight animation */
 @keyframes text-highlight {
   0% {
@@ -139,8 +203,16 @@ section {
   body {
     font-size: 2rem;
   }
+  .site-header {
+    flex-direction: column;
+  }
+  .divider {
+    display: inline-block;
+    height: 1rem;
+  }
   .welcome-msg {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    gap: 2.5rem;
   }
   .welcome-msg > div {
     margin: 1.25rem 0;
@@ -150,6 +222,17 @@ section {
   }
   .about-me-summary {
     width: unset;
+  }
+  blockquote {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  blockquote:before {
+    left: -1.25rem;
+  }
+  .profession-title {
+    flex-direction: column;
+    row-gap: 0.5rem;
   }
 
   /* Remove color filter section for mobile */

@@ -11,31 +11,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <header>
+    <header class="site-header">
       <h1 class="welcome-msg">
-        <div>Hey there <span class="hand-wave-emoji">&#128075;</span></div>
-        <div>
+        <span>Hey there <span class="hand-wave-emoji">&#128075;</span></span>
+        <span>
           I am <br class="name-break" />Khavin <br class="name-break" />Krishnan
-          <br class="name-break" />Kalpana
-        </div>
+          Kalpana<br /><br />
+        </span>
       </h1>
+      <nav class="repo-profile-links">
+        <a
+          class="header-link"
+          target="_blank"
+          href="https://www.linkedin.com/in/khavin-k-k/"
+        >
+          <img
+            alt="LinkedIn Logo"
+            class="nav-logo"
+            src="./assets/LinkedIn-Icon.jpeg"
+          />
+        </a>
+        <a class="header-link" target="_blank" href="https://github.com/khavin">
+          <img
+            alt="GitHub Logo"
+            class="nav-logo"
+            src="./assets/github-mark.svg"
+          />
+        </a>
+      </nav>
     </header>
     <main>
-      <section class="about-me-summary">
-        I am a
-        <span class="highlighted-text">&nbsp;full stack developer.&nbsp;</span>
-        I love creating intuitive and pragmatic websites. This is my portfolio.
+      <p class="about-me-summary">
+        I am a Software Engineer. I love creating intuitive and pragmatic
+        websites. I am a Computer Science grad student at Virginia Tech. In my
+        recent times I have developed a deep appreciation for the little
+        machines that has changed our lives. My goal is to understand these
+        machines in a deeper level and contribute to the city in a meaningful
+        way. I am a big fan of motorsports and the engineering that goes into
+        them.
+      </p>
+      <section class="projects-section">
+        <h2 class="section-title">Projects</h2>
+        <ul class="project-list">
+          <li class="project-list-item">
+            <article>
+              <h3 class="project-title">
+                <a
+                  class="project-title-link"
+                  href="https://ecommerce-clone.khavin.me/"
+                  target="_blank"
+                >
+                  Trader Joe's Clone <span class="link-emoji">&#128279;</span>
+                </a>
+                <a
+                  class="repo-link"
+                  target="_blank"
+                  href="https://github.com/khavin/trader-joes-clone"
+                >
+                  <img
+                    alt="GitHub Logo"
+                    class="nav-logo"
+                    src="./assets/github-mark.svg"
+                  />
+                </a>
+              </h3>
+
+              <p class="tech-stack">React, Javascript, Golang, MongoDB</p>
+              <p class="project-description">
+                Motivation is to build a responsive ecommerce site which has
+                proper semantic meaning, proper documentation, and WCAG
+                accessibility.
+              </p>
+              <p class="project-regrets">
+                Regrets: I am still building the site. Not enough time to have
+                regrets :)
+              </p>
+            </article>
+          </li>
+          <li class="project-list-item">
+            <article>
+              <h3 class="project-title">
+                A tool to detect bottlenecks during initial page load
+                <a
+                  class="repo-link"
+                  target="_blank"
+                  href="https://github.com/khavin/frontend-performance-analysis-tool/blob/main/final_report.pdf"
+                >
+                  <img
+                    alt="GitHub Logo"
+                    class="nav-logo"
+                    src="./assets/github-mark.svg"
+                  />
+                </a>
+              </h3>
+
+              <p class="tech-stack">Javascript</p>
+              <p class="project-description">
+                This is one of my first steps in doing something novel/research
+                oriented. Motivation is to detect requests (that got initiated
+                late) that caused a delay in rendering the site. We analyzed the
+                performance trace data to identify those requests. You can find
+                more information on the github page.
+              </p>
+              <p class="project-regrets">
+                Regrets: Should have automated the entire flow. Manual process
+                involved to fetch the performance trace data.
+              </p>
+            </article>
+          </li>
+          <li class="project-list-item">
+            <article>
+              <h3 class="project-title">
+                <a
+                  class="project-title-link"
+                  href="https://notes-project.khavin.me/"
+                  target="_blank"
+                >
+                  A site to take notes <span class="link-emoji">&#128279;</span>
+                </a>
+                <a
+                  class="repo-link"
+                  target="_blank"
+                  href="https://github.com/khavin/notes"
+                >
+                  <img
+                    alt="GitHub Logo"
+                    class="nav-logo"
+                    src="./assets/github-mark.svg"
+                  />
+                </a>
+              </h3>
+              <p class="tech-stack">Angular, NgRx</p>
+              <p class="project-description">
+                Motivation is to build a medium complexity site that has a lot
+                of stateful actions going on.
+              </p>
+              <p class="project-regrets">
+                Regrets: Oh boy! Where do I start. The site has no
+                documentation. No semantic html. No responsive design. No
+                backend whatsoever. No accesibility support. But still learnt a
+                lot from doing this.
+              </p>
+            </article>
+          </li>
+        </ul>
       </section>
       <section>
-        <div class="image-display">
-          <div>
-            <img
-              class="portrait"
-              src="./assets/portrait_nyc_2.jpg"
-              width="100%"
-            />
-          </div>
-        </div>
+        <h2 class="section-title">Quotes that had an impact on me</h2>
+        <blockquote>
+          In any new situation, whether it involves an elevator or a rocket
+          ship, you will almost certainly be viewed in one of three ways. As a
+          minus one: actively harmful, someone who creates problems. Or as a
+          zero: your impact is neutral and doesn't tip the balance one way or
+          the other. Or you'll be seen as a plus one: someone who actively adds
+          value. Everyone wants to be a plus one, of course. But proclaiming
+          your plus-oneness at the outset almost guarantees you'll be perceived
+          as a minus one, regardless of the skills you bring to the table or how
+          you actually perform.
+          <cite>- Chris Hadfield, An Astronaut's Guide to Life on Earth</cite>
+        </blockquote>
+        <blockquote>
+          The process is more important than the results. And if you take care
+          of the process, you will get the results.
+          <cite>- MS Dhoni, Indian Cricketer</cite>
+        </blockquote>
+      </section>
+      <section class="profession-section">
+        <h2 class="section-title">Professional Experience</h2>
+        <ol class="profession-list">
+          <li class="profession-list-item">
+            <article>
+              <h3 class="profession-title">
+                <span>Research Assistant at Virginia Tech</span>
+                <span class="profession-duration">May 2023 - Present</span>
+              </h3>
+              <p class="profession-desc">
+                Currently working with Dr. Michael Hsiao on a platform called
+                Gamechangineer. The platform's goal is to teach logical thinking
+                to school children.
+              </p>
+            </article>
+          </li>
+          <li class="profession-list-item">
+            <article>
+              <h3 class="profession-title">
+                <span>Full Stack Developer at Visa Inc.</span>
+                <span class="profession-duration"
+                  >July 2018 - December 2022</span
+                >
+              </h3>
+              <p class="profession-desc">
+                Built tools and dashboards for Cybersecurity analysts to
+                identify threats and take action.
+              </p>
+            </article>
+          </li>
+        </ol>
       </section>
     </main>
   </body>
