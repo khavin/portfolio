@@ -1,5 +1,6 @@
 :root {
   --heading-font: "Libre Baskerville", serif;
+  font-size: 12px;
 }
 body {
   /* font-family: Arial, Helvetica, sans-serif; */
@@ -7,6 +8,7 @@ body {
   font-weight: 400;
   margin: 3rem;
   font-size: 1.75rem;
+  max-width: 950px;
 }
 main {
   margin-bottom: 4rem;
@@ -91,7 +93,7 @@ section {
   width: fit-content;
   font-family: var(--heading-font);
   font-style: italic;
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   display: flex;
   gap: 0.25rem;
   margin: 0.5rem 0;
@@ -116,16 +118,16 @@ section {
   padding: 2rem 0;
 }
 .project-description {
-  font-size: 1.5rem;
+  font-size: 1.55rem;
 }
 .project-regrets {
   margin: 3rem 0 0 0;
-  font-size: 1.5rem;
+  font-size: 1.55rem;
 }
 blockquote {
   display: block;
   margin: 4rem 2.5rem;
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   position: relative;
 }
 blockquote:before {
@@ -148,12 +150,12 @@ blockquote cite {
 .profession-title {
   font-family: var(--heading-font);
   font-style: italic;
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   display: flex;
   justify-content: space-between;
 }
 .profession-desc {
-  font-size: 1.5rem;
+  font-size: 1.55rem;
 }
 .profession-duration {
   font-size: 1.25rem;
@@ -200,8 +202,12 @@ blockquote cite {
 
 /* Modifications for mobile */
 @media only screen and (max-width: 775px) {
+  :root {
+    font-size: 16px;
+  }
   body {
     font-size: 2rem;
+    max-width: unset;
   }
   .site-header {
     flex-direction: column;
@@ -256,8 +262,5 @@ blockquote cite {
   html {
     display: flex;
     justify-content: center;
-  }
-  body {
-    max-width: 1200px;
   }
 }
