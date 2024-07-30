@@ -6,7 +6,7 @@ body {
   /* font-family: Arial, Helvetica, sans-serif; */
   font-family: "EB Garamond", serif;
   font-weight: 400;
-  margin: 3rem;
+  margin: 3rem auto;
   font-size: 1.75rem;
   max-width: 950px;
 }
@@ -73,7 +73,7 @@ section {
   font-size: 2rem;
 }
 .tech-stack {
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-style: italic;
   margin: 0;
 }
@@ -160,6 +160,12 @@ blockquote cite {
 .profession-duration {
   font-size: 1.25rem;
 }
+.profession-list {
+  padding: 0;
+}
+.profession-list-item {
+  list-style: none;
+}
 /* Full stack developer highlight animation */
 @keyframes text-highlight {
   0% {
@@ -208,6 +214,7 @@ blockquote cite {
   body {
     font-size: 2rem;
     max-width: unset;
+    margin: 3rem 2.5rem;
   }
   .site-header {
     flex-direction: column;
@@ -234,7 +241,7 @@ blockquote cite {
     margin-right: 0;
   }
   blockquote:before {
-    left: -1.25rem;
+    left: -1rem;
   }
   .profession-title {
     flex-direction: column;
@@ -254,13 +261,5 @@ blockquote cite {
   .portrait {
     margin: unset;
     width: 100%;
-  }
-}
-
-/* Centre the content for very large displays */
-@media only screen and (min-width: 1200px) {
-  html {
-    display: flex;
-    justify-content: center;
   }
 }
