@@ -1,6 +1,7 @@
 :root {
   --heading-font: "Libre Baskerville", serif;
-  font-size: 12px;
+  --desc-font-size: 1.75rem;
+  font-size: 0.75rem;
   text-align: justify;
 }
 body {
@@ -74,7 +75,7 @@ section {
   font-size: 2rem;
 }
 .tech-stack {
-  font-size: 1.55rem;
+  font-size: 1.65rem;
   font-style: italic;
   margin: 0;
 }
@@ -121,17 +122,17 @@ section {
   padding: 2rem 0;
 }
 .project-description {
-  font-size: 1.55rem;
+  font-size: var(--desc-font-size);
   line-height: 1.85rem;
 }
 .project-regrets {
   margin: 3rem 0 0 0;
-  font-size: 1.55rem;
+  font-size: var(--desc-font-size);
 }
 blockquote {
   display: block;
   margin: 4rem 2.5rem;
-  font-size: 1.55rem;
+  font-size: var(--desc-font-size);
   position: relative;
 }
 blockquote:before {
@@ -144,6 +145,7 @@ blockquote:before {
   color: black;
 }
 blockquote cite {
+  font-size: 1.65rem;
   display: block;
   margin-top: 1rem;
   font-style: italic;
@@ -159,10 +161,10 @@ blockquote cite {
   justify-content: space-between;
 }
 .profession-desc {
-  font-size: 1.55rem;
+  font-size: var(--desc-font-size);
 }
 .profession-duration {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
 }
 .profession-list {
   padding: 0;
@@ -213,7 +215,7 @@ blockquote cite {
 /* Modifications for mobile */
 @media only screen and (max-width: 775px) {
   :root {
-    font-size: 14px;
+    font-size: 0.8rem;
     text-align: left;
   }
   body {
