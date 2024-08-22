@@ -1,15 +1,21 @@
 :root {
+  --default-font: "EB Garamond", serif;
   --heading-font: "Libre Baskerville", serif;
-  --desc-font-size: 1.75rem;
+  --default-font-size: 1.75rem;
+  --section-title-font-size: 2.15rem;
+  --project-title-font-size: 1.8rem;
+  --sub-text-font-size: 1.45rem;
+  --emoji-font-size: 1.5rem;
+  --quote-font-size: 7rem;
   font-size: 0.75rem;
   text-align: justify;
 }
 body {
   /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: "EB Garamond", serif;
+  font-family: var(--default-font);
   font-weight: 400;
   margin: 3rem auto;
-  font-size: 1.75rem;
+  font-size: var(--default-font-size);
   max-width: 950px;
 }
 main {
@@ -18,7 +24,6 @@ main {
 .site-header {
   font-family: var(--heading-font);
   font-weight: 400;
-  font-size: 1rem;
   display: flex;
   justify-content: space-between;
   font-style: italic;
@@ -27,6 +32,7 @@ main {
   margin: 0;
   display: flex;
   flex-direction: column;
+  font-size: var(--section-title-font-size);
 }
 .repo-profile-links {
   display: flex;
@@ -42,8 +48,8 @@ main {
 .link-logo {
   font-family: unset;
 }
-.link-emoji {
-  font-size: 1.5rem;
+.emoji {
+  font-size: var(--emoji-font-size);
   font-weight: 400;
   font-style: normal;
 }
@@ -72,16 +78,15 @@ section {
   width: 70%;
   display: flex;
   justify-content: space-between;
-  font-size: 2rem;
 }
 .tech-stack {
-  font-size: 1.65rem;
+  font-size: var(--sub-text-font-size);
   font-style: italic;
   margin: 0;
 }
 .section-title {
   font-family: var(--heading-font);
-  font-size: 2.5rem;
+  font-size: var(--section-title-font-size);
   font-style: italic;
 }
 .project-list {
@@ -95,7 +100,7 @@ section {
   width: fit-content;
   font-family: var(--heading-font);
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: var(--project-title-font-size);
   display: flex;
   gap: 0.25rem;
   margin: 0.5rem 0;
@@ -122,30 +127,29 @@ section {
   padding: 2rem 0;
 }
 .project-description {
-  font-size: var(--desc-font-size);
-  line-height: 2.15rem;
+  font-size: var(--default-font-size);
 }
 .project-regrets {
   margin: 3rem 0 0 0;
-  font-size: var(--desc-font-size);
+  font-size: var(--default-font-size);
 }
 blockquote {
   display: block;
   margin: 4rem 2.5rem;
-  font-size: var(--desc-font-size);
+  font-size: var(--default-font-size);
   position: relative;
 }
 blockquote:before {
   display: block;
   content: "\201C";
   position: absolute;
-  font-size: 7rem;
+  font-size: var(--quote-font-size);
   left: -2.75rem;
   top: -4rem;
   color: black;
 }
 blockquote cite {
-  font-size: 1.65rem;
+  font-size: var(--sub-text-font-size);
   display: block;
   margin-top: 1rem;
   font-style: italic;
@@ -156,15 +160,17 @@ blockquote cite {
 .profession-title {
   font-family: var(--heading-font);
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: var(--project-title-font-size);
   display: flex;
   justify-content: space-between;
 }
 .profession-desc {
-  font-size: var(--desc-font-size);
+  font-size: var(--default-font-size);
 }
 .profession-duration {
-  font-size: 1.35rem;
+  font-family: var(--default-font);
+  font-size: var(--sub-text-font-size);
+  font-weight: 400;
 }
 .profession-list {
   padding: 0;
@@ -216,10 +222,8 @@ blockquote cite {
 @media only screen and (max-width: 775px) {
   :root {
     font-size: 0.8rem;
-    text-align: left;
   }
   body {
-    font-size: 2rem;
     max-width: unset;
     margin: 3rem 2.5rem;
   }
@@ -231,7 +235,6 @@ blockquote cite {
     height: 1rem;
   }
   .welcome-msg {
-    font-size: 2.5rem;
     gap: 2.5rem;
   }
   .welcome-msg > div {
