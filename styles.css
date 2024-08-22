@@ -221,7 +221,7 @@ blockquote cite {
 /* Modifications for mobile */
 @media only screen and (max-width: 775px) {
   :root {
-    font-size: 0.8rem;
+    font-size: 0.68rem;
   }
   body {
     max-width: unset;
@@ -245,6 +245,11 @@ blockquote cite {
   }
   .about-me-summary {
     width: unset;
+  }
+  .project-title {
+    flex-direction: column;
+    align-items: unset;
+    gap: 1rem;
   }
   blockquote {
     margin-left: 0;
